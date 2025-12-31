@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: frontend
+
+  profiles:
+    active: dev
+
+  config:
+    import: optional:configserver:http://admin:admin12345@localhost:9000
