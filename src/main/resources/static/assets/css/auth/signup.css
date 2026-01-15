@@ -1,0 +1,99 @@
+.join-container {
+    max-width: 1200px;
+}
+
+.join-card {
+    border-radius: 14px;
+}
+
+.join-submit {
+    height: 54px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.field-feedback {
+    margin-top: .35rem;
+    font-size: .9rem;
+    line-height: 1.2;
+    min-height: 1.2em;
+    color: transparent;
+}
+
+.field-feedback.ok { color: var(--bs-success); }
+.field-feedback.bad { color: var(--bs-danger); }
+.field-feedback.info { color: var(--bs-secondary); }
+
+.password-wrap {
+    position: relative;
+}
+
+.password-input {
+    padding-right: 48px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    padding: 0;
+    line-height: 1;
+    color: var(--bs-secondary);
+    cursor: pointer;
+}
+
+.password-toggle:hover {
+    color: var(--bs-body-color);
+}
+
+.password-toggle:focus {
+    outline: none;
+}
+
+.password-toggle:focus-visible {
+    outline: 2px solid rgba(13,110,253,.35);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+.password-toggle i {
+    font-size: 1.2rem;
+}
+
+.password-input.is-valid,
+.password-input.is-invalid {
+    background-image: none !important;
+    padding-right: 48px !important;
+}
+
+#emailVerifyBtn,
+#otpVerifyBtn,
+#otpResendBtn {
+    white-space: nowrap;
+}
+
+.otp-section .field-feedback {
+    margin-top: .35rem;
+}
+
+.otp-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: .75rem;
+    align-items: flex-start;
+}
+
+.otp-meta .field-feedback {
+    flex: 1 1 auto;
+}
+
+.otp-timers {
+    flex: 0 0 auto;
+    text-align: right;
+    white-space: nowrap;
+    margin-top: .35rem;
+    font-variant-numeric: tabular-nums;
+}
