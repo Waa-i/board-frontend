@@ -7,3 +7,22 @@ spring:
 
   config:
     import: optional:configserver:http://admin:admin12345@localhost:9000
+
+  security:
+    oauth2:
+      client:
+        registration:
+          board:
+            client-name: board
+            client-id: bff-client
+            client-secret: secret
+            client-authentication-method: client_secret_basic
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: openid
+        provider:
+          board:
+            authorization-uri: http://localhost:8010/auth/oauth2/authorize
+            token-uri: http://localhost:8010/auth/oauth2/token
+            jwk-set-uri: http://localhost:8010/auth/oauth2/jwks
+            user-name-attribute: sub

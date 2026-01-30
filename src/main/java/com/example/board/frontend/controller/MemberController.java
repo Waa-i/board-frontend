@@ -3,6 +3,7 @@ package com.example.board.frontend.controller;
 import com.example.board.frontend.client.auth.AuthApiClient;
 import com.example.board.frontend.client.member.MemberApiClient;
 import com.example.board.frontend.dto.*;
+import com.example.board.frontend.dto.EmailVerificationSendRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;

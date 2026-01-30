@@ -8,12 +8,16 @@ import org.springframework.web.bind.annotation.*;
 public interface AuthApiClient {
     @PostMapping("/auth/signup")
     ApiResponse<Void> signUp(@RequestHeader("X-Signup-Proof") String token, @RequestBody MemberSignUpRequest request);
+
     @GetMapping("/auth/members/availability/username")
     ApiResponse<AvailabilityData> checkUsernameAvailability(@RequestParam("username") String username);
+
     @GetMapping("/auth/members/availability/email")
     ApiResponse<AvailabilityData> checkEmailAvailability(@RequestParam("email") String email);
+
     @PostMapping("/auth/email-verifications")
     ApiResponse<EmailVerificationSendResponse> sendOtp(@RequestBody EmailVerificationSendRequest request);
+
     @PostMapping("/auth/email-verifications/verify")
     ApiResponse<EmailVerificationVerifyResponse> verifyOtp(@RequestBody EmailVerificationVerifyRequest request);
 }
